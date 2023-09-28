@@ -1,0 +1,39 @@
+# Blade Components
+* Perbedaan Layout dan Component
+  Layout -> Adalah manggil secara keseluruhan
+  Component -> Adalah manggil bagian bagian terkecil (bisa di pakai berkali kali)
+* Membuat dan mengunakan component
+  -> php artisan make:component Alert
+  -> contoh buat button di component terus cara mangil nya cuman buat <x-alert/> di halaman yang ingin di tampilkan
+* Mengirim data ke component
+  -> daftar kan ke app/view/Components/alert.php dulu apa yang mau di kirim ke component, terus buat atribut <x-alert message='ini adalah halaman Home'/>
+
+# Slug untuk SEO Frindly & Pretty URL (Digging Deeper/Helpers)
+* Mengganti Parameter id menjadi name di halaman detail
+  -> Pretty URL adalah cara yang khas yang memudahkan user mencari product yang kita pasarkan melalui aplikasi web yang kita bangun.
+  -> cara ganti nya bikin di controller, where('name',$name)->first();
+* Menambahkan kolom slug di table 
+  -> slug adalah bikin nama url cantik dari string yang kita pilih
+  -> cara bikin nya buat tabel baru di database dengan nama slug (nama bebas).
+* Membuat slug ketika menambah student
+* Pencarian data student dengan slug
+* mass update data yang slugnya masil null
+  -> Collection map : yaitu untu mengubah seluruh data , cuman 1x kerja
+* Hasil implementasi slug
+
+# SLUG Eloquent Sluggable (mengatasi nama yang sama di table)
+* Membuat slug dengan eloquent sluggable
+
+# Breeze Authentication_Fitur Register-Login-Logout(membuat fitur login-logout-registrasi versi laravel)
+* Setup Project 
+* Install Laravel Breeze
+  -> composer require laravel/breeze --dev
+  -> php artisan breeze:install
+  -> php artisan migrate
+  -> npm install
+  -> npm run dev
+
+# Laravel Logging , Debug Error (Cara menyembuyikan error dari client)
+* Setup database dan project laravel
+* Penggunaan laravel log stack
+* Penggunaan laravel log daily
